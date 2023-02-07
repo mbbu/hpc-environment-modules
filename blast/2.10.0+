@@ -1,0 +1,19 @@
+#%Module1.0
+#####################################################################
+##
+## NCBI BLAST+ Modulefile
+## by Andrew, <aespira@icipe.org>
+## February, 2020
+##
+
+set appname			blast
+set version			2.10.0+
+set prefix			/export/apps/${appname}/${version}
+set exec_prefix		${prefix}/bin
+set url "http://blast.ncbi.nlm.nih.gov"
+set msg "This module adds BLAST $version to various paths\n\nNCBI BLAST Official Site: $url\n"
+
+conflict ${appname}
+
+prepend-path	PATH	${exec_prefix}
+setenv          BLASTDB /opt/data/bio/ncbi/blast/db:/opt/data/bio/uniprot/blast/db

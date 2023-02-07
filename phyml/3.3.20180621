@@ -1,0 +1,17 @@
+#%Module1.0#####################################################################
+##
+## phyml modulefile
+## By Andrew espira <aespira@icipe.org>
+## September, 2020
+##
+
+set appname         phyml
+set version         3.3.20180621
+set prefix          /opt/apps/${appname}/${version}
+set exec_prefix     ${prefix}/bin
+
+conflict    phyml
+
+prepend-path    PATH    ${exec_prefix}
+
+# vim: set sw=4 ts=4:

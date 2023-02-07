@@ -1,0 +1,15 @@
+#%Module1.0#####################################################################
+##
+## Geneious modulefile
+## By Andrew <aespira@icipe.org>
+## jan, 2021
+##
+
+# for Tcl script use only
+set     appname         genesis
+#set     version         7.1.8
+set     prefix          /export/apps/${appname}
+
+conflict	genesis
+
+prepend-path    PATH            ${prefix}

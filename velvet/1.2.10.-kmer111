@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## velvet modulefile
+## By Andrew espira <aespira@icipe.org>
+## September, 2020
+##
+
+# for Tcl script use only
+set     version         1.2.10-kmer111
+set     appname         velvet
+set     prefix          /opt/apps/${appname}/${version}
+set     exec_prefix     ${prefix}
+
+conflict	$appname
+
+prepend-path    PATH            ${exec_prefix}

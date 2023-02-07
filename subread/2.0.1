@@ -1,0 +1,26 @@
+#%Module1.0
+#####################################################################
+##
+## subread Modulefile
+## by Andrew <aespira@icipe.org>
+## Dec, 2020
+##
+
+set appname         subread
+set version         2.0.1
+set prefix          /opt/apps/${appname}/${version}
+set exec_prefix     ${prefix}/bin
+set url             "http://subread.sourceforge.net"
+set msg             "High-performance read alignment, quantification and mutation discovery\nOfficial site: $url\n"
+
+proc ModulesHelp{ } {
+    puts stderr $msg
+}
+
+module-whatis $msg
+
+conflict $appname
+
+prepend-path    PATH        ${exec_prefix}
+
+# vim: set sw=4 ts=4:

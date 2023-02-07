@@ -1,0 +1,16 @@
+#%Module1.0#####################################################################
+##
+## biana modulefile
+## By Andrew espira <aespira@icipe.org>
+## July, 2013
+##
+
+# for Tcl script use only
+set     appname         biana
+set     version         1.4.6
+set     prefix          /opt/apps/${appname}/${version}
+set     exec_prefix     ${prefix}
+
+conflict        biana
+
+prepend-path    PYTHONPATH            ${exec_prefix}

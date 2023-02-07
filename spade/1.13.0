@@ -1,0 +1,22 @@
+#%Module1.0#####################################################################
+##
+## spades modulefile
+## By Andrew espira <aespira@icipe.org>
+## February, 2020
+##
+
+set appname     spades
+set version     3.13.0
+set prefix      /opt/apps/${appname}/${version}
+set exec_prefix ${prefix}/bin
+set url         "https://github.com/ablab/spades"
+set msg         "Spades is a single-cell genome assembler.\nSpades Official Site: $url"
+
+conflict        spades
+
+module-whatis   $msg
+
+prepend-path    PATH    ${exec_prefix}
+
+# vim: set sw=4 ts=4:
+

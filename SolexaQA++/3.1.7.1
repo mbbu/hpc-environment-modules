@@ -1,0 +1,24 @@
+#%Module1.0
+#####################################################################
+##
+## SolexaQA++ Modulefile
+## By ANdrew
+## March 2021
+##
+
+set appname         SolexaQA++
+set version         3.1.7.1
+set prefix          /opt/apps/${appname}/${version}
+set exec_prefix     ${prefix}
+set url "http://solexaqa.sourceforge.net/"
+set msg "SolexaQA calculates sequence quality statistics and creates visual representations of data quality for second-generation sequencing data.\SolexaQA++ Official Site: $url\n"
+
+module-whatis $msg
+
+proc ModulesHelp { } {
+    puts stderr "$msg"
+}
+
+conflict        SolexaQA++
+
+prepend-path    PATH    ${exec_prefix}

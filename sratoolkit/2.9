@@ -1,0 +1,19 @@
+#%Module1.0
+#####################################################################
+##
+## sratoolkit Modulefile
+## by Andrew espira
+## June, 2018
+##
+
+set appname         sratoolkit
+set version         2.9
+set prefix          /opt/apps/${appname}/${version}
+set exec_prefix     ${prefix}/bin
+set url             "http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=software"
+
+conflict        sratoolkit
+
+prepend-path    PATH    ${exec_prefix}
+
+# vim: set sw=4 ts=4:

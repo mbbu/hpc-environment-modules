@@ -1,0 +1,20 @@
+#%Module1.0#####################################################################
+##
+## Trimgalore modulefile
+## By Andrew espira <aespira@icipe.org>
+## Dec, 2020
+##
+
+set appname     trimgalore
+set version     0.6.5
+set prefix      /opt/apps/${appname}/${version}
+set exec_prefix ${prefix}/trim_galore
+##set url         "https://salmon.readthedocs.io/en/latest/salmon.html"
+
+conflict        $appname
+
+##module-whatis   $msg
+
+prepend-path    PATH    ${prefix}/trim_galore
+
+# vim: set sw=4 ts=4:

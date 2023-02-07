@@ -1,0 +1,26 @@
+#%Module1.0
+#####################################################################
+##
+## star Modulefile
+## by Andrew <aespira@icipe.org>
+## October, 2020
+##
+
+set appname     star
+set version     2.7.6a
+set prefix      /opt/apps/${appname}/${version}
+set exec_prefix ${prefix}/bin
+set url         "https://github.com/alexdobin/STAR/"
+set msg         "STAR (Spliced Transcripts Alignment to a Reference) is an RNA-seq aligner.\nOfficial site: $url\n"
+
+proc ModulesHelp{ } {
+    puts stderr $msg
+}
+
+module-whatis   $msg
+
+conflict        $appname
+
+prepend-path    PATH    ${exec_prefix}
+
+# vim: set sw=4 ts=4:

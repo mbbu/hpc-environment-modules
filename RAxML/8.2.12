@@ -1,0 +1,18 @@
+#%Module1.0#####################################################################
+##
+## RAxML modulefile
+## By Andrew espira <aespira@icipe.org>
+## February, 2020
+##
+
+set appname     RAxML
+set version     8.12.2
+set prefix	/opt/apps/${appname}/${version}
+set exec_prefix ${prefix}/bin
+set url         "https://github.com/stamatak/standard-RAxML"
+set msg         "RAxML (Randomized Axelerated Maximum Likelihood) is a program $
+
+conflict        RAxML
+
+module-whatis   $msg
+
